@@ -1,0 +1,96 @@
+.Showcase {
+    position: absolute;
+    display: flex;
+    display: -webkit-flex;
+    flex-direction: column;
+    bottom: 0;
+    padding: 4px 8px;
+    background-color: #ffffff88;
+    user-select: none;
+    color: #777;
+    border-radius: 10px;
+
+    .TopArea {
+        display: inherit;
+        flex-wrap: wrap;
+        flex-direction: row;
+
+        .Icon {
+            margin: auto 0;
+            // margin-bottom: -212px;  // make variable for Showcase height and set this with it?
+            margin-left: 2px;
+            width: 32px;
+            height: 32px;
+            border-radius: 3px;
+            flex-shrink: 0;
+        }
+        
+        .TitleArea {
+            display: inherit;
+            flex-direction: column;
+            flex: 1;
+
+            .Name {
+                margin: auto 10px;
+                // margin-left: 10px;
+                // margin-top: 10px;
+            }
+
+            .Description {
+                margin: auto 10px;
+                // margin: 0 10px;
+            }
+        }
+
+        .GitHub {
+            margin: auto 0;
+        }
+    }
+
+    .Screenshots {
+        display: inherit;
+        flex-direction: row;
+        flex-grow: 1;
+        overflow: hidden;
+
+        .Screenshot {
+            display: inherit;
+            width: 100%;
+            height: 100%;
+
+            img {
+                position: relative;
+                margin: auto 42px;
+                max-width: 420px;
+                border-radius: 10px;
+            }
+        }
+    }
+
+    .BottomArea {
+        display: inherit;
+        flex-direction: row;
+
+        .Technologies {
+            display: inherit;
+            flex-direction: inherit;
+            align-self: flex-start;
+            flex: 1;
+
+            .Technology {
+                padding: 3.2px;
+                border-radius: 6px;
+                margin: 0 5px;
+                
+                color: #ffffff88;
+                font-size: 1em;
+                font-weight: lighter;
+            }
+        }
+
+        .Timestamp {
+            margin: 10px;
+            width: max-content;
+        }
+    }
+}

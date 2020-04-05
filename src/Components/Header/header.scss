@@ -1,1 +1,78 @@
-.header {}
+@import "../../Colors.scss";
+
+$header-width: 100%;
+$header-height: 420px;
+
+.Header {
+    display: flex;
+    flex-direction: column;
+    width: $header-width;
+    min-height: $header-height;
+    align-items: center;
+    justify-content: center;
+
+    background-image: linear-gradient(#392033 -20%, #ff8967 60%);
+    box-shadow: inset black 0 -80px 38px -100px;
+
+    .CelestialBody {
+        width: 100px;
+        height: 100px;
+        background-image: linear-gradient(#FF382B, #ffffff00 80%);
+        border-radius: 50%;
+        margin-top: auto;
+        margin-bottom: -30px;
+    }
+
+    h1 {
+        font-style: italic;
+        font-size: 2.5em;
+        color: #777;
+
+        margin: 0;
+        padding: 4px 8px;
+        background-image: linear-gradient(#ffffff88, #ffffff88);
+        background-position: bottom;
+        background-size: auto 0.5em;
+        background-repeat: no-repeat;
+    }
+
+    h4 {
+        font-style: normal;
+        font-size: 1.2em;
+        color: #777;
+
+        margin-bottom: 60px;
+        padding: 4px 8px;
+        background-image: linear-gradient(#ffffff88, #ffffff88);
+        // background-position: bottom;
+        // background-size: auto 0.5em;
+        background-repeat: no-repeat;
+    }
+
+    // @mixin fade-style {
+    //     content: "";
+    //     position: absolute;
+    //     z-index: 1;
+    //     pointer-events   : none;
+    //     background-image : linear-gradient(to bottom, 
+    //                         rgba(255,255,255, 0), 
+    //                         $background 90%);
+    //     width    : $header-height;
+    //     height   : $fade-height;
+    // }
+
+    // $fade-height: 20px;
+    // &::before {
+    //     @include fade-style();
+        
+    //     transform: rotate(-90deg) 
+    //             translateY($header-width / 2 - $fade-height / 2);
+    // }
+
+    // &::after {
+    //     @include fade-style();
+        
+    //     transform: rotate(90deg) 
+    //             translateY($header-width / 2 - $fade-height / 2);
+    // }
+}
