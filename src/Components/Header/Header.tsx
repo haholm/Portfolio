@@ -12,7 +12,7 @@ export default function Header(props: HeaderProps) {
                 Welcome to my portfolio.
             </h1>
             <h4>
-                My name is Hampus, a Full Stack Developer.
+                My name is Hampus.<br/>I am a Computer Science Student, a Full Stack Developer and a Runner.
             </h4>
         </div>
     );
