@@ -14,7 +14,7 @@ export default function Header(props: HeaderProps) {
             <h4>
                 My name is Hampus.<br/>I am a Computer Science Student, a Full Stack Developer and a Runner.
             </h4>
-            <span className="Contact"><a href="mailto:mail@hampusholm.dev">Contact me!</a> (mail@hampusholm.dev)</span>
+            <a className="Contact" href="mailto:mail@hampusholm.dev">Contact me&nbsp;</a>
         </div>
     );
 }

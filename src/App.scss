@@ -1,6 +1,3 @@
-// https://coolors.co/00072d-001c55-0a2472-0e6ba8-a6e1fa
-// 
-
 @import url('https://fonts.googleapis.com/css?family=Open+Sans');
 @import "Colors.scss";
 
@@ -18,11 +15,16 @@ body {
   align-items: center;
 }
 
-.Creds {
+.Copyright {
   font-size: 0.8em;
   margin: 0;
   padding: 1vh 0;
   text-align: center;
   color: #777;
   user-select: none;
+}
+
+a[href^="mailto"]::after {
+  font-family: "Font Awesome 5 Free", serif;
+  content: " \f0e0";
 }

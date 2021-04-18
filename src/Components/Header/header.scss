@@ -42,7 +42,7 @@
         color: #777;
 
         text-align: center;
-        margin: 22px 5px 60px 5px;
+        margin: 22px 5px 22px 5px;
         padding: 4px 8px;
         background-image: linear-gradient(#ffffff88, #ffffff88);
         // background-position: bottom;
@@ -50,32 +50,23 @@
         background-repeat: no-repeat;
     }
 
-    // @mixin fade-style {
-    //     content: "";
-    //     position: absolute;
-    //     z-index: 1;
-    //     pointer-events   : none;
-    //     background-image : linear-gradient(to bottom,
-    //                         rgba(255,255,255, 0),
-    //                         $background 90%);
-    //     width    : $header-height;
-    //     height   : $fade-height;
-    // }
+    a.Contact {
+        text-decoration: none;
+        color: #000;
+        background: #fff8;
+        margin-bottom: 38px;
+        padding: 5px;
+        border-radius: 6px;
+        outline: none;
 
-    // $fade-height: 20px;
-    // &::before {
-    //     @include fade-style();
+        &::after {
+            font-size: 0.8em;
+        }
 
-    //     transform: rotate(-90deg)
-    //             translateY($header-width / 2 - $fade-height / 2);
-    // }
-
-    // &::after {
-    //     @include fade-style();
-
-    //     transform: rotate(90deg)
-    //             translateY($header-width / 2 - $fade-height / 2);
-    // }
+        &:hover {
+            background-color: #eee;
+        }
+    }
 
     /* Extra Small Devices, Phones */
     @media only screen and (max-width : 480px) {

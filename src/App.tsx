@@ -8,7 +8,7 @@ function App() {
     <div className="App">
       <Header />
       <Timeline />
-      <p className="Creds">Made with ❤<br/>© Hampus Holm 2021</p>
+      <p className="Copyright">Made with ❤<br/>© Hampus Holm 2021</p>
     </div>
   );
 }
