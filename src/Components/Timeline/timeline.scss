@@ -5,29 +5,29 @@
 }
 
 .Timeline {
-    $timelineHeight: 100%;
+    $height: 800px;
     position: relative;
     display: flex;
     align-items: center;
+    justify-content: center;
     flex-direction: column;
-    flex-shrink: 1;
-    
-    width: 60vw;
-    height: $timelineHeight;
+    flex-shrink: 0;
+
+    height: $height;
+    width: 100%;
 
     & * {
         transition: 0.2s ease;
     }
 
     .Line {
-        $height: 700px;
         position: absolute;
-        top: 40px;
+
         width: 40px;
         height: 0;
-        padding-bottom: $height;
+        padding-bottom: $height - 100px;
         background-image: linear-gradient(rgba(0, 0, 0, 0), #333333aa);
-        border-radius: 20px 20px 0 0;
+        border-radius: 20px;
         
         .Point {
             @include PointSizing(120%, 108%);
@@ -43,7 +43,6 @@
             &:hover {
                 background-position-y: 50%;
                 @include PointSizing(120%, 120%);
-                cursor: pointer;
 
                 .Showcase {
                     transform: translateY(-2px);
@@ -62,7 +61,6 @@
             .Showcase {
                 margin-left: 4.2em;
                 margin-bottom: -148px;
-                width: fit-content;
                 width: 500px;
                 height: 320px;
             }
@@ -75,10 +73,6 @@
                 margin-bottom: -140px;
                 width: 500px;
                 height: 320px;
-
-                // margin-left: -19em;
-                // margin-bottom: -20px;
-                // height: 80px;
             }
         }
         .Point:nth-child(3) {
@@ -87,15 +81,34 @@
             .Showcase {
                 margin-left: 4.2em;
                 margin-bottom: -132px;
-                width: fit-content;
                 width: 500px;
                 height: 320px;
+            }
+        }
+    }
 
-                // margin-left: 4.2em;
-                // margin-bottom: -20px;    MIGHT KEEP
-                // width: fit-content;
-                // width: 296px;
-                // height: 80px;
+    /* Extra Small Devices, Phones */
+    @media only screen and (max-width : 1135px) {
+
+        .Line {
+
+            .Point {
+
+                /* applies to all children, same specificity as earlier rules. */
+                .Showcase:nth-child(n) {
+                    width: 296px;
+                    height: 90px;
+                    margin: 0 0 56px -132px;
+                }
+            }
+            .Point:nth-child(1) {
+                margin-bottom: 150%;
+            }
+            .Point:nth-child(2) {
+                margin-bottom: 650%;
+            }
+            .Point:nth-child(3) {
+                margin-bottom: 1150%;
             }
         }
     }

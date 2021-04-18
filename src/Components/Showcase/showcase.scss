@@ -14,6 +14,7 @@
         display: inherit;
         flex-wrap: wrap;
         flex-direction: row;
+        margin: auto 0;
 
         .Icon {
             margin: auto 0;
@@ -70,17 +71,20 @@
     .BottomArea {
         display: inherit;
         flex-direction: row;
+        flex-shrink: 1;
+        margin: auto 0 4px 0;
 
         .Technologies {
             display: inherit;
             flex-direction: inherit;
             align-self: flex-start;
             flex: 1;
+            margin: auto;
 
             .Technology {
                 padding: 3.2px;
                 border-radius: 6px;
-                margin: 0 5px;
+                margin: 0 2px;
                 
                 color: #ffffff88;
                 font-size: 1em;
@@ -89,8 +93,40 @@
         }
 
         .Timestamp {
-            margin: 10px;
+            margin: 6px;
             width: max-content;
+        }
+    }
+
+    /* Extra Small Devices, Phones */
+    @media only screen and (max-width : 1135px) {
+        background-color: #eee;
+
+        h2 {
+            font-size: 1.1em;
+        }
+
+        h4 {
+            font-size: 0.75em;
+        }
+
+        .Screenshots {
+            visibility: collapse;
+            max-height: 0;  // setting only height: 0; here does not have an effect.
+        }
+
+        .BottomArea {
+
+            .Technologies {
+
+                .Technology {
+                    font-size: 0.8em;
+                }
+            }
+
+            .Timestamp {
+                font-size: 0.8em;
+            }
         }
     }
 }
